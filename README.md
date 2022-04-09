@@ -1,1 +1,1 @@
-# haskell_emurgo
+# Lessons and exercises
