@@ -23,3 +23,17 @@ foo =
   let f = print in
     f "hello world"
 In your example, the let expression is defining two names, n and ns, which are used in the body of the function.
+
+
+# Foldr
+Say we want to calculate the sum of a very big list:
+
+> veryBigList = [1..1000000]
+Let's start with the following:
+
+> foldr f z []     = z
+> foldr f z (x:xs) = x `f` foldr f z xs
+
+> sum1 = foldr (+) 0
+
+> try1 = sum1 veryBigList
